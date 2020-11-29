@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  localstack:
+    image: localstack/localstack
+    ports:
+      - 443:443
+      - 4510-4520:4510-4520
+      - 4566-4620:4566-4620
+    environment:
+      - SERVICES=s3,sqs
+      - DEFAULT_REGION=eu-west-2
+      - DEBUG=1
+    volumes:
+      - ./initaws:/docker-entrypoint-initaws.d

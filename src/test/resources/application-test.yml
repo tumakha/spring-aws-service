@@ -1,0 +1,16 @@
+
+cloud:
+  aws:
+    region:
+      static: eu-west-2
+    stack:
+      auto: false
+    credentials:
+      accessKey: accesskey
+      secretKey: secretkey
+
+sqs:
+  orderQueue: test-order-queue
+
+s3:
+  orderBucket: test-order-bucket

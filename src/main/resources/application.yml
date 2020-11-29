@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-aws-service
+
+server:
+  port: 8888
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,httptrace,env,configprops,info,shutdown
+  trace:
+    http:
+      include: AUTHORIZATION_HEADER, COOKIE_HEADERS, REMOTE_ADDRESS, REQUEST_HEADERS, RESPONSE_HEADERS, TIME_TAKEN
+
+sqs:
+  orderQueue: order-queue
+
+s3:
+  orderBucket: order-bucket
