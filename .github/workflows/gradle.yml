@@ -27,8 +27,8 @@ jobs:
         restore-keys: ${{ runner.os }}-gradle
     - name: Verify Tools
       run: ./gradlew --version
-    - name: Build with Gradle
-      run: ./gradlew build
+    - name: Build & Test with Gradle
+      run: ./gradlew clean build
     - name: Push to DockerHub
       uses: docker/build-push-action@v1
       with:
