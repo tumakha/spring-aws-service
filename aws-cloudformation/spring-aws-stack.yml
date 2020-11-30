@@ -522,7 +522,7 @@ Resources:
       HealthCheckGracePeriodSeconds: 60
       DeploymentConfiguration:
         MaximumPercent: 200
-        MinimumHealthyPercent: 50
+        MinimumHealthyPercent: 75
       DesiredCount: !Ref DesiredCount
       NetworkConfiguration:
         AwsvpcConfiguration:
