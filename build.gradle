@@ -21,7 +21,7 @@ repositories {
 
 ext {
     set('springCloudVersion', 'Hoxton.SR9')
-    awsSdkVersion = '1.11.903'
+    awsSdkVersion = '1.11.908'
     awsXrayRecorderVersion = '2.7.1'
     springfoxVersion = '3.0.0'
     testcontainersVersion = '1.15.0'
