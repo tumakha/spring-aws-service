@@ -43,7 +43,7 @@ public class SwaggerConfig {
                 "AWS Service Demo. Active profiles: " + Arrays.toString(env.getActiveProfiles()),
                 "1.0",
                 "",
-                new Contact("Yuriy Tumakha", "", "Yuriy.Tumakha@iplato.com"),
+                new Contact("Yuriy Tumakha", "", "Yuriy.Tumakha@gmail.com"),
                 "", "", List.of());
     }
 
