@@ -43,7 +43,7 @@ Parameters:
     Description: A name for the Log Group
   ImageUrl:
     Type: String
-    Default: tumakha/spring-aws-service:jre15
+    Default: tumakha/spring-aws-service
     Description: The url of a docker image that contains the application process that
       will handle the traffic for this service
   ContainerPort:
@@ -504,6 +504,9 @@ Resources:
         - Name: !Ref ServiceName
           Cpu: !Ref ContainerCpu
           Memory: !Ref ContainerMemory
+          Environment:
+            - Name: AWS_EC2_METADATA_DISABLED
+              Value: true
           Image: !Ref ImageUrl
           PortMappings:
             - ContainerPort: !Ref ContainerPort

@@ -17,6 +17,14 @@ management:
     http:
       include: AUTHORIZATION_HEADER, COOKIE_HEADERS, REMOTE_ADDRESS, REQUEST_HEADERS, RESPONSE_HEADERS, TIME_TAKEN
 
+cloud:
+  aws:
+    region:
+      static: eu-west-2
+      auto: false
+    stack:
+      auto: false
+
 sqs:
   orderQueue: order-queue
 
