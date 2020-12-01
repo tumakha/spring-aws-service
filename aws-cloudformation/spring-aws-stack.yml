@@ -584,11 +584,11 @@ Resources:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: order-queue
-#  S3Bucket:
-#    Type: AWS::S3::Bucket
-#    DeletionPolicy: Retain
-#    Properties:
-#      BucketName: order-bucket
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: order-bucket
 
 # These are the values output by the CloudFormation template. Be careful
 # about changing any of them, because of them are exported with specific
