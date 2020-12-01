@@ -95,6 +95,7 @@ Resources:
                 - ec2.amazonaws.com
                 - sqs.amazonaws.com
                 - s3.amazonaws.com
+                - xray.amazonaws.com
             Action: sts:AssumeRole
       Path: /
       Policies:
@@ -107,6 +108,7 @@ Resources:
                   - s3:*
                   - ec2:*
                   - ecs:*
+                  - xray:*
 
                   - iam:ListAttachedRolePolicies
                   - iam:ListInstanceProfiles
@@ -527,7 +529,7 @@ Resources:
       ServiceName: !Ref ServiceName
       Cluster: !Ref ECSCluster
       LaunchType: FARGATE
-      HealthCheckGracePeriodSeconds: 60
+      HealthCheckGracePeriodSeconds: 120
       DeploymentConfiguration:
         MaximumPercent: 200
         MinimumHealthyPercent: 75
